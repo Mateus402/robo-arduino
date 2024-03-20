@@ -1,4 +1,4 @@
-# Robo Seguidor de Linha - Arduino
+# Robo Seguidor de Linha - Arduino 🤖 🚘
 
 Esse projeto foi realizado como proposta da matéria <em> Projeto Integrador Extensionista: Robótica Aplicada.</em>
 
