@@ -10,17 +10,17 @@ O objetivo é montar um robo, utilizando sensores LDR, para que siga uma linha p
 
 ### Lógica
 
-Esse projeto utiliza 3 sensores que serão dispostos a frete do carrinho. Considerando que a pista será um local plano, predominantemente branco, com uma linha preta como guia, seguimos a seguinte lógica:
+Esse projeto utiliza 3 sensores que serão dispostos a frete do robo. Considerando que a pista será um local plano, predominantemente branco, com uma linha preta como guia, seguimos a seguinte lógica:
 
 - DIREÇÃO
 
-    - Quando o sensor do meio estiver sobre a linha preta, os dois motores estarão ligados, fazendo com que o carrinho ande em linha reta.
+    - Quando o sensor do meio estiver sobre a linha preta, os dois motores estarão ligados, fazendo com que o robo ande em linha reta.
 
-    - Caso o sensor da direito passe sobre a linha preta, o motor da direita irá desligar e o motor da esquerda continuará ligado, fazendo com que o carrinho vire para direita corrigindo a posição.
+    - Caso o sensor da direito passe sobre a linha preta, o motor da direita irá desligar e o motor da esquerda continuará ligado, fazendo com que o robo vire para direita corrigindo a posição.
 
-    - Caso o sensor da esquerda passe sobre a linha preta, o motor da esquerda irá desligar e o motor da direita continuará ligado, fazendo com que o carrinho vire para esquerda corrigindo a posição.
+    - Caso o sensor da esquerda passe sobre a linha preta, o motor da esquerda irá desligar e o motor da direita continuará ligado, fazendo com que o robo vire para esquerda corrigindo a posição.
 
-    - Quando o carrinho corrigir a posição, os dois motores voltarão a ligar simultaneamente.
+    - Quando o robo corrigir a posição, os dois motores voltarão a ligar simultaneamente.
 
         Validação:
         ```c++
@@ -68,10 +68,10 @@ Esse projeto utiliza 3 sensores que serão dispostos a frete do carrinho. Consid
 
 - VERIFICAÇAO DE CRUZAMENTO
 
-    - Em casos que tenha 2 linhas em sentidos opostos formando um "+", os 3 sensores estarão com a identificação da linha preta, nesse caso, ele manterá os 2 motores ligados fazendo com que o carrinho permaneça em movimento reto.
+    - Em casos que tenha 2 linhas em sentidos opostos formando um "+", os 3 sensores estarão com a identificação da linha preta, nesse caso, ele manterá os 2 motores ligados fazendo com que o robo permaneça em movimento reto.
 
 - PERDA DA LINHA DO PERCURSO
-    - Caso ocorra do carrinho perder a linha preta, ou seja, os 3 sensores não lerem mais a linha, a seguinte lógica foi aplicada:
+    - Caso ocorra do robo perder a linha preta, ou seja, os 3 sensores não lerem mais a linha, a seguinte lógica foi aplicada:
         
         - O robo desligará os 2 motores sinalizando que perdeu a leitura da linha durante 1,5 segundos.
         - Ligará novamente os 2 motores por 2 segundos.
